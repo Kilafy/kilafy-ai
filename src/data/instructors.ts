@@ -3,30 +3,30 @@ import { Instructor } from "@/types";
 export const INSTRUCTORS_DATA: Instructor[] = [
   {
     id: "instructor-1",
-    name: "Camilo Torres",
-    role: "Especialista en Gestión de Proyectos IA",
-    image: "/images/instructors/CAMILO.HEIC",
-    description: "Experto en liderar proyectos de IA con más de 10 años de experiencia en transformación digital empresarial."
+    name: "Miguel Calvache",
+    role: "Director de Estrategia y Gestión de Proyectos IA",
+    image: "/images/instructors/MIGUEL_ANGEL_CALVACHE.webp",
+    description: "Líder empresarial especializado en transformación digital y gestión estratégica de proyectos de IA. Experto en traducir necesidades de negocio en soluciones tecnológicas exitosas."
   },
   {
     id: "instructor-2",
-    name: "María González",
-    role: "Experta en Automatización",
-    image: "/images/instructors/instructor-2.jpg",
-    description: "Especialista en n8n y automatización de procesos empresariales con enfoque en soluciones escalables."
+    name: "Andrés Caro",
+    role: "Arquitecto Frontend & Especialista en IA Generativa",
+    image: "/images/instructors/ANDRES_JULIAN_CARO.webp",
+    description: "Ingeniero de software con experiencia avanzada en desarrollo asistido por IA. Experto en GitHub Copilot, prompting estratégico y construcción de agentes inteligentes para empresas."
   },
   {
     id: "instructor-3",
-    name: "Carlos Ruiz",
-    role: "Desarrollador Senior IA",
-    image: "/images/instructors/instructor-3.jpg",
-    description: "Experto en desarrollo asistido por IA y herramientas modernas como GitHub Copilot y frameworks AI-first."
+    name: "Camilo Álvarez",
+    role: "Arquitecto Backend & Líder Técnico IA",
+    image: "/images/instructors/ANDRÉS_CAMILO_ÁLVAREZ.webp",
+    description: "Especialista en arquitecturas backend escalables e integración de sistemas de IA. Experto en APIs, bases de datos vectoriales y implementación de soluciones RAG empresariales."
   },
   {
     id: "instructor-4",
-    name: "Ana Martínez",
-    role: "Consultora Estratégica IA",
-    image: "/images/instructors/instructor-4.jpg",
-    description: "Consultora con experiencia en implementación de IA en empresas de diferentes sectores e industrias."
+    name: "Felipe Arredondo",
+    role: "Arquitecto Cloud & DevOps para IA",
+    image: "/images/instructors/LUIS_FELIPE_ARREDONDO.webp",
+    description: "Experto en infraestructura cloud y DevOps especializado en despliegue de soluciones IA. Líder en automatización, escalabilidad y optimización de sistemas en producción."
   }
 ];
