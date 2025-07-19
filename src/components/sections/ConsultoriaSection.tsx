@@ -21,7 +21,7 @@ export function ConsultoriaSection() {
     { label: "Implementación Completa", price: "Cotización personalizada" }
   ];
 
-  const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent("Hola, me interesa conocer más sobre la consultoría por horas de Kilafy IA")}`;
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent("Hola, me interesa conocer más sobre la consultoría por horas de Kilafy AI")}`;
 
   return (
     <section id="consultoria" className="py-24 lg:py-32 bg-white relative overflow-hidden">

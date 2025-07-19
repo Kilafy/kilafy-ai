@@ -51,7 +51,7 @@ export function AboutSection() {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            ¿Por qué elegir Kilafy IA?
+            ¿Por qué elegir Kilafy AI?
           </h2>
           <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
             Somos especialistas en transformación empresarial con IA. Nuestro enfoque único combina 
