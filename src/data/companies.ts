@@ -3,7 +3,7 @@ import { Company } from "@/types";
 export const COMPANIES_DATA: Company[] = [
   {
     id: "brandlab",
-    name: "Brand Lab",
+    name: "CO BrandLab",
     logo: "/images/companies/co_brandlab.jpg"
   },
   {
@@ -13,7 +13,7 @@ export const COMPANIES_DATA: Company[] = [
   },
   {
     id: "freemove",
-    name: "Freemove",
+    name: "FreeMove",
     logo: "/images/companies/freemove.png"
   },
   {
@@ -23,7 +23,7 @@ export const COMPANIES_DATA: Company[] = [
   },
   {
     id: "integra",
-    name: "Integra",
+    name: "Integra Soluciones Globales",
     logo: "/images/companies/integra.png"
   },
   {
