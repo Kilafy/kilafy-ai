@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kilafy AI",
-  description: "Transformando empresas con Inteligencia Artificial práctica y estratégica. Cursos especializados, consultoría por horas y soluciones de IA para equipos y organizaciones.",
+  description: "Transformando empresas con Inteligencia Artificial práctica y estratégica. Cursos especializados, consultoría personalizada y soluciones de IA para equipos y organizaciones.",
   keywords: ["Inteligencia Artificial", "IA", "Cursos IA", "Consultoría IA", "Automatización", "Machine Learning", "Capacitación empresarial", "Transformación digital"],
   authors: [{ name: "Kilafy AI" }],
   creator: "Kilafy AI",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Kilafy AI - Transformando Empresas con Inteligencia Artificial",
-    description: "Cursos especializados, consultoría por horas y soluciones de IA para equipos y organizaciones. Aprende a implementar IA de forma práctica y estratégica.",
+    description: "Cursos especializados, consultoría personalizada y soluciones de IA para equipos y organizaciones. Aprende a implementar IA de forma práctica y estratégica.",
     url: "https://kilafy.com",
     siteName: "Kilafy AI",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kilafy AI - Transformando Empresas con IA",
-    description: "Cursos especializados y consultoría en Inteligencia Artificial para empresas. Implementa IA de forma práctica y estratégica.",
+    description: "Cursos especializados y consultoría personalizada en Inteligencia Artificial para empresas. Implementa IA de forma práctica y estratégica.",
     images: ["/preview.png"],
     creator: "@KilafyAI",
     site: "@KilafyAI",

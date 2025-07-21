@@ -47,7 +47,7 @@ export function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#consultoria" className="hover:text-white transition-colors">
-                  Consultoría por Horas
+                  Consultoría Especializada
                 </a>
               </li>
               <li>

@@ -8,20 +8,11 @@ export function ConsultoriaSection() {
   const consultoriaFeatures = [
     "Asesoría personalizada en proyectos de IA",
     "Workshops y sesiones privadas para equipos",
-    "Implementación de soluciones específicas",
-    "Auditoría de procesos para automatización",
     "Mentoría técnica en herramientas de IA",
     "Estrategia de adopción de IA empresarial"
   ];
 
-  const pricingDetails = [
-    { label: "Consultoría Individual", price: "Desde $150 USD/hora" },
-    { label: "Consultoría para Equipos", price: "Desde $200 USD/hora" },
-    { label: "Workshop Empresarial", price: "Desde $300 USD/hora" },
-    { label: "Implementación Completa", price: "Cotización personalizada" }
-  ];
-
-  const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent("Hola, me interesa conocer más sobre la consultoría por horas de Kilafy AI")}`;
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent("Hola, me interesa conocer más sobre la consultoría especializada de Kilafy AI")}`;
 
   return (
     <section id="consultoria" className="py-24 lg:py-32 bg-white relative overflow-hidden">
@@ -31,11 +22,11 @@ export function ConsultoriaSection() {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-            Consultoría por Horas
+            Consultoría Especializada
           </h2>
           <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
-            Oferta flexible de consultoría especializada en IA para equipos y empresas que necesitan asesoría
-            específica y resultados inmediatos.
+            Servicio especializado de consultoría en IA. Estamos desarrollando soluciones personalizadas 
+            para cada cliente y empresa según sus necesidades específicas.
           </p>
         </div>
 
@@ -52,9 +43,9 @@ export function ConsultoriaSection() {
                   </div>
                   
                   <p className="text-gray-600 text-lg lg:text-xl mb-8 leading-relaxed">
-                    Contrata nuestros servicios por horas según tus necesidades específicas. 
-                    Ideal para resolver dudas puntuales, implementar soluciones rápidas o 
-                    recibir mentoría especializada.
+                    Nuestro servicio de consultoría está diseñado para adaptarse a las necesidades específicas 
+                    de tu organización. Cada proyecto es único y trabajamos contigo para desarrollar la mejor 
+                    estrategia de implementación de IA.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -80,23 +71,18 @@ export function ConsultoriaSection() {
                     <div className="p-3 bg-emerald-100 rounded-xl">
                       <Users className="h-8 w-8 text-emerald-600" />
                     </div>
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900">Modalidades y Precios</h3>
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900">Servicio Personalizado</h3>
                   </div>
                   
-                  <div className="space-y-4">
-                    {pricingDetails.map((item, index) => (
-                      <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                        <span className="font-medium text-gray-900">{item.label}</span>
-                        <span className="text-emerald-600 font-semibold">{item.price}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
-                    <p className="text-sm text-emerald-800">
-                      <strong>Descuentos disponibles:</strong> Paquetes de 10+ horas tienen descuentos especiales. 
-                      Contactanos para una cotización personalizada.
-                    </p>
+                  <div className="space-y-6">
+                    <div className="p-4 bg-emerald-50 rounded-lg">
+                      <h4 className="font-semibold text-emerald-800 mb-2">Consultoría a Medida</h4>
+                      <p className="text-emerald-700 text-sm leading-relaxed">
+                        Cada proyecto de consultoría es único. Desarrollamos propuestas personalizadas 
+                        basadas en las necesidades específicas de tu empresa y objetivos de IA.
+                      </p>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
