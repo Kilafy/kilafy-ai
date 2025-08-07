@@ -12,7 +12,13 @@ export function Header({ onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavigation = (sectionId: string) => {
-    onNavigate(sectionId);
+    if (sectionId === 'news') {
+      window.location.href = '/news';
+    } else if (sectionId === 'inicio') {
+      window.location.href = '/';
+    } else {
+      onNavigate(sectionId);
+    }
     setIsMenuOpen(false);
   };
 

@@ -14,7 +14,8 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   { id: "consultoria", label: "Consultoría", href: "#consultoria" },
   { id: "instructores", label: "Instructores", href: "#instructores" },
   { id: "empresas", label: "Empresas", href: "#empresas" },
-  { id: "contacto", label: "Contacto", href: "#contacto" }
+  { id: "contacto", label: "Contacto", href: "#contacto" },
+  { id: "news", label: "Noticias", href: "/news" }
 ];
 
 export const BRAND = {
