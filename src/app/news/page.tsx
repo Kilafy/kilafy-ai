@@ -1,79 +1,45 @@
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
-import { NewsCard } from "@/components/sections/NewsCard";
 import { NewsHeader } from "@/components/layout/NewsHeader";
+import { NewsContent } from "@/components/sections/NewsContent";
 
-const NEWS_QUERY = `*[
+// Optimized query to get initial news (last 30 days for better performance)
+const INITIAL_NEWS_QUERY = `*[
   _type == "news"
   && defined(slug.current)
-]|order(publishedAt desc){_id, title, slug, publishedAt, image, source}`;
+  && dateTime(publishedAt) > dateTime(now()) - 60*60*24*30
+]|order(publishedAt desc)[0...50]{_id, title, slug, publishedAt, image, source}`;
 
-const options = { next: { revalidate: 30 } };
-
-interface GroupedNews {
-  [date: string]: SanityDocument[];
-}
+const options = { next: { revalidate: 300 } }; // 5 minutes cache for better performance
 
 export default async function NewsPage() {
-  const news = await client.fetch<SanityDocument[]>(NEWS_QUERY, {}, options);
+  // Try optimized query first, fall back to all news if empty
+  let news = await client.fetch<SanityDocument[]>(
+    INITIAL_NEWS_QUERY,
+    {},
+    options,
+  );
 
-  // Group news by date
-  const groupedNews: GroupedNews = news.reduce((acc, item) => {
-    const date = new Date(item.publishedAt).toLocaleDateString("es-ES", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+  // Fallback to all news if no recent news found
+  if (news.length === 0) {
+    const FALLBACK_QUERY = `*[
+      _type == "news"
+      && defined(slug.current)
+    ]|order(publishedAt desc)[0...50]{_id, title, slug, publishedAt, image, source}`;
 
-    if (!acc[date]) {
-      acc[date] = [];
-    }
-    acc[date].push(item);
-    return acc;
-  }, {} as GroupedNews);
+    news = await client.fetch<SanityDocument[]>(FALLBACK_QUERY, {}, options);
+  }
+
+  console.log("Fetched news:", news.length, "items");
 
   return (
     <div className="min-h-screen bg-gray-50">
       <NewsHeader />
 
-      {/* Top navbar */}
-      <div className="bg-white shadow-sm border-b mt-16">
-        <div className="container mx-auto px-4 lg:px-6 py-4">
-          <h2 className="text-lg font-semibold text-gray-800">
-            Inteligencia Artificial - Últimas Noticias
-          </h2>
-        </div>
-      </div>
-
       <main className="container mx-auto px-4 lg:px-6 py-8 max-w-4xl">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Noticias</h1>
 
-        <div className="space-y-8">
-          {Object.entries(groupedNews).map(([date, newsItems]) => (
-            <div key={date} className="bg-white rounded-lg shadow-sm border">
-              <div className="bg-emerald-50 px-6 py-4 border-b">
-                <h2 className="text-xl font-semibold text-emerald-800 capitalize">
-                  {date}
-                </h2>
-              </div>
-
-              <div className="p-6 space-y-4">
-                {newsItems.map((item) => (
-                  <NewsCard key={item._id} news={item} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {news.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              No hay noticias disponibles en este momento.
-            </p>
-          </div>
-        )}
+        <NewsContent initialNews={news} />
       </main>
     </div>
   );
