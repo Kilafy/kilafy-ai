@@ -29,27 +29,28 @@ export function NewsCard({ news }: NewsCardProps) {
   return (
     <div
       onClick={handleClick}
-      className="flex gap-4 p-4 border border-gray-200 rounded-lg hover:shadow-md hover:border-emerald-300 transition-all duration-200 cursor-pointer group bg-white">
+      className="flex flex-col md:flex-row gap-3 md:gap-4 p-4 border border-gray-200 rounded-lg hover:shadow-md hover:border-emerald-300 transition-all duration-200 cursor-pointer group bg-white">
       {/* Image */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 w-full md:w-auto">
         {imageUrl ? (
           <Image
             src={imageUrl}
             alt={news.title}
-            className="w-32 h-20 md:w-48 md:h-28 object-cover rounded-lg"
+            className="w-full h-40 md:w-48 md:h-28 object-cover rounded-lg"
             width={200}
             height={120}
+            sizes="(max-width: 768px) 100vw, 200px"
           />
         ) : (
-          <div className="w-32 h-20 md:w-48 md:h-28 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-40 md:w-48 md:h-28 bg-gray-200 rounded-lg flex items-center justify-center">
             <span className="text-gray-400 text-sm">Sin imagen</span>
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col justify-center">
-        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors line-clamp-2 mb-2">
+      <div className="flex-1 flex flex-col justify-center mt-3 md:mt-0">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors md:line-clamp-2 mb-2 whitespace-normal break-words">
           {news.title}
         </h3>
 
