@@ -153,7 +153,7 @@ export const COURSES_DATA: Course[] = [
       "Aplicar buenas prácticas para que tus automatizaciones sean seguras y escalables"
     ],
     modalityDuration: {
-      modality: "100% práctico",
+      modality: "100% teórico-práctico",
       duration: "Personalizable (8h, 12h o 16h)",
       targetAudience: "Equipos de tecnología, operaciones, producto, marketing o cualquier área que busque optimizar tareas repetitivas y tomar decisiones más inteligentes."
     },
